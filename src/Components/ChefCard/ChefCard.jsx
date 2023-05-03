@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const ChefCard = () => {
-    const [chefCards,setChefCards] = useState([]);
-
-
-    useEffect(()=>{
-        fetch('http://localhost:5000/chefCard')
-        .then(res=> res.json())
-        .then(data => setChefCards(data))
-        .catch(error=> console.error(error))
-    },[])
+const ChefCard = ({chefCard}) => {
+   console.log(chefCard);
 
     return (
-        <div>
+        <div className='grid md:grid-cols-3'>
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
                 <div className="card-body">
                     <h2 className="card-title">Shoes!</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css'
 import ChefCard from '../ChefCard/ChefCard';
+import ChefCards from '../ChefCards/ChefCards';
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
             </div>
             {/* Chef card section */}
             <div>
-                <ChefCard></ChefCard>
+                <ChefCards></ChefCards>
             </div>
         </div>
     );
