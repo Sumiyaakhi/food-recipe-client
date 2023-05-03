@@ -1,17 +1,24 @@
 import React from 'react';
 
+
 const ChefCard = ({chefCard}) => {
+    const {id, picture, name, years_of_experience,num_recipes,likes,views} = chefCard;
    console.log(chefCard);
 
     return (
-        <div className='grid md:grid-cols-3'>
+        <div >
+            
             <div className="card w-96 bg-base-100 shadow-xl">
-                <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+                <img className='rounded' src={picture} />
                 <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                    <h2 className="card-title text-3xl font-bold">{name}</h2>
+                    <p>Experience: {years_of_experience} years</p>
+                    <p>Numbers of recipes: {num_recipes}</p>
+                    <p>Likes: {likes}</p> 
+                    <p>views: {views} </p>
+                    
+                    <div className="card-actions">
+                        <button className="btn bg-amber-500 border-0 ">View recipes</button>
                     </div>
                 </div>
             </div>
