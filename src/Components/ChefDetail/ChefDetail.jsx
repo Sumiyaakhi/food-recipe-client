@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/Ai';
 import { BiStreetView } from 'react-icons/Bi';
+import Recipes from '../Recipes/Recipes';
 
 const ChefDetail = () => {
 
@@ -30,7 +31,10 @@ const ChefDetail = () => {
             </div>
 
 
-
+            {/* Recipe of this chef's  */}
+            <div>
+            <Recipes></Recipes>
+            </div>
         </div>
     );
 };
