@@ -14,7 +14,7 @@ const ChefCards = () => {
     return (
         <div>
              <h1 className='text-4xl text-amber-500 text-center pb-8'>Here are some Categories of our chef's!</h1>
-            <div className='mx-16 grid grid-cols-3 gap-4 pb-8'>
+            <div className='mx-16 md:grid grid-cols-3 gap-4 pb-8'>
            
             {
                 chefCards.map(chefCard => <ChefCard 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css'
-import ChefCard from '../ChefCard/ChefCard';
 import ChefCards from '../ChefCards/ChefCards';
+import FoodList from '../FoodList/FoodList';
 
 const Home = () => {
     return (
@@ -19,6 +19,16 @@ const Home = () => {
             {/* Chef card section */}
             <div>
                 <ChefCards></ChefCards>
+            </div>
+            {/* Food Recipe section */}
+            <FoodList></FoodList>
+            {/* another section */}
+            <div className="rating gap-1 flex justify-center  my-10">
+                <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" checked />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
+                <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
             </div>
         </div>
     );
