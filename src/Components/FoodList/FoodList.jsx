@@ -16,7 +16,7 @@ const FoodList = () => {
            <div className='md:grid grid-cols-3 gap-4 '>
             {
                 foodItems.map(foodItem => <FoodCard 
-                key={foodItems.id}
+                key={foodItem.id}
                 foodItem = {foodItem}
                 ></FoodCard>)
             }

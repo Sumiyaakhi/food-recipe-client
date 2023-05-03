@@ -1,9 +1,18 @@
-import React from 'react';
-import { Button, Link } from 'react-daisyui';
+import React, { useContext } from 'react';
 import { MdFastfood } from 'react-icons/Md';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 const Header = () => {
+  // const {  logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.error(error))
+  }
+
   return (
     <div className='mx-12 mt-5'>
       <div className="navbar bg-base-100">
@@ -32,20 +41,21 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li> <Link className='no-underline text-orange-500' to='/'>Home</Link></li>
-            <li> <Link  className='no-underline text-orange-500' to='blog'>Blog</Link></li>
-            
+            <li> <Link className='no-underline text-orange-500' to='blog'>Blog</Link></li>
+
           </ul>
         </div>
         <div className="navbar-end">          {
-                                // user && pic
-                            }
-
-                            {/* {user ? */}
-                                <Button className='bg-amber-500 border-0' >Logout</Button> :
+          // user && pic
+        }
+          <Link className="bg-amber-500 text-white px-3 py-2 rounded text-xl me-4" to="/login">Login</Link>
+          <Link className="bg-amber-500 text-white px-3 py-2 rounded text-xl" to="/register">Register</Link>
+          {/* {user ? */}
+          {/* <Button className='bg-amber-500 border-0' >Logout</Button> :
                                 <Link to="/login">
                                     <Button className=' bg-amber-500 border-0'>Login</Button>
-                                </Link>
-                            {/* } */}
+                                </Link> */}
+          {/* } */}
         </div>
       </div>
     </div>

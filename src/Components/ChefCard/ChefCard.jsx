@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ChefCard = ({chefCard}) => {
     const {id, picture, name, years_of_experience,num_recipes,likes,views} = chefCard;
-   console.log(chefCard);
+//    console.log(chefCard);
 
     return (
         <div >
@@ -18,7 +19,7 @@ const ChefCard = ({chefCard}) => {
                     <p>views: {views} </p>
                     
                     <div className="card-actions">
-                        <button className="btn bg-amber-500 border-0 ">View recipes</button>
+                       <Link to={`/chefCard/${id}`}> <button className="btn bg-amber-500 border-0 ">View recipes</button></Link>
                     </div>
                 </div>
             </div>
