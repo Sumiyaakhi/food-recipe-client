@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css'
 import ChefCards from '../ChefCards/ChefCards';
 import FoodList from '../FoodList/FoodList';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Home = () => {
     return (
@@ -13,7 +14,12 @@ const Home = () => {
                     <h1 className='text-6xl text-amber-500 font-bold pt-8'>Kevin's Famous <br /> Spicy Salsa <br /> with Mangoes!!!</h1>
                 </div>
                 <div>
-                    <img className='rounded' src="https://t3.ftcdn.net/jpg/03/35/51/06/360_F_335510693_HY7mLg3ARdLccKoXk3m66NLDpJRJh51p.jpg" alt="" />
+                <LazyLoadImage src="https://t3.ftcdn.net/jpg/03/35/51/06/360_F_335510693_HY7mLg3ARdLccKoXk3m66NLDpJRJh51p.jpg"
+        width={600} height={400}
+        PlaceholderSrc={<img src='"https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-picture-icon-png-image_695350.jpg"'></img>}
+        
+        alt="Image Alt"
+      />
                 </div>
             </div>
             {/* Chef card section */}
