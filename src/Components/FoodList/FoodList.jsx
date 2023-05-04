@@ -7,7 +7,7 @@ const FoodList = () => {
 const [isLoading,setIsLoading] =useState(true);
     useEffect(()=>{
         setIsLoading(true);
-        fetch('http://localhost:5000/foodItems')
+        fetch('https://foodie-recepie-server-sumiyaakhi.vercel.app/foodItems')
         .then(res => res.json())
         .then(data=>setFoodItems(data))
         .catch(error=>console.error(error))

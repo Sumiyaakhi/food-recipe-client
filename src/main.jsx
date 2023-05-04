@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path:'/chefCard/:id',
         element:<PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:5000/chefCard/${params.id}`)
+        loader:({params}) => fetch(`https://foodie-recepie-server-sumiyaakhi.vercel.app/chefCard/${params.id}`)
       },
       {
         path:'/blog',

@@ -10,7 +10,7 @@ const ChefCards = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('http://localhost:5000/chefCard')
+        fetch('https://foodie-recepie-server-sumiyaakhi.vercel.app/chefCard')
             .then(res => res.json())
             .then(data => setChefCards(data))
             .catch(error => console.error(error))
