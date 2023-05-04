@@ -2,6 +2,7 @@
 
 - Make a food website
 - In header option , there has banner with some text and image.
+- on header ,there are also button for login or logout. If user loggedIn then showed the logeOut button otherwise it showed only login button. 
 - Then there has categories of 6 chefs. It has chef's name,experience,number of his/her recipes,likes,views and a view Recipe button .
 - In this button ,If we clicked then it show chefs details
 - Then there has some recipe section where has 4 recipe and some information
