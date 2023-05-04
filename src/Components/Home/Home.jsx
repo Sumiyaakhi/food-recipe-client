@@ -16,7 +16,7 @@ const Home = () => {
                 <div>
                 <LazyLoadImage src="https://t3.ftcdn.net/jpg/03/35/51/06/360_F_335510693_HY7mLg3ARdLccKoXk3m66NLDpJRJh51p.jpg"
         width={600} height={400}
-        PlaceholderSrc={<img src='"https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-picture-icon-png-image_695350.jpg"'></img>}
+       
         
         alt="Image Alt"
       />

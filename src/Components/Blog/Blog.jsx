@@ -22,7 +22,7 @@ const Blog = () => {
         <h1 className='text-6xl font-bold text-center text-amber-500'>Some Question Answer section</h1>
 
         <Button className='ms-8' onClick={downloadPDF}>Download Pdf</Button>
-       <div  ref={contentRef}>
+       <div >
        <div className='md:grid grid-cols-2 gap-10 mb-10'>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content text-center">
