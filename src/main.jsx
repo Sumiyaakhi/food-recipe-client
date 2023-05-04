@@ -12,6 +12,8 @@ import Register from './Components/Register/Register';
 import ChefDetail from './Components/ChefDetail/ChefDetail';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Blog from './Components/Blog/Blog';
+import AuthProviders from './Components/Provider/AuthProvider';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element:<Blog></Blog>
+      },
+      {
+        path:'/aboutUs',
+        element:<AboutUs></AboutUs>,
       }
     ]
   },
@@ -47,6 +53,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <AuthProviders>
      <RouterProvider router={router} />
+     </AuthProviders>
   </React.StrictMode>,
 )
