@@ -7,7 +7,7 @@ import { Button } from 'react-daisyui';
 
 
 const Header = () => {
-  const { user,logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
@@ -42,25 +42,19 @@ const Header = () => {
 
           </ul>
         </div>
-        <div className="navbar-end">          {
-          // user && pic
-        }
-          {/* <Link className="bg-amber-500 text-white px-3 py-2 rounded text-xl me-4" to="/login">Login</Link>
-          <Link className="bg-amber-500 text-white px-3 py-2 rounded text-xl" to="/register">Register</Link> */}
-
-          {/* {user ? */}
-          {/* <Button className='bg-amber-500 border-0' >Logout</Button> :
-                                <Link to="/login">
-                                    <Button className=' bg-amber-500 border-0'>Login</Button>
-                                </Link> */}
-          {/* } */}
+        <div className="navbar-end">
           {
-          user ? <>
-          <span>{user.email}</span>
-          <Button onClick={handleLogOut} className='bg-amber-500 border-0' >Logout</Button>
-          </>:  <Link to="/login">
-                                    <Button className=' bg-amber-500 border-0'>Login</Button>
-                                </Link> 
+            user ? <>
+              {/* <span>{user.email}</span> */}
+              <div className="avatar">
+                <div className="w-12 rounded-full">
+                  <img title={user.email} src="https://img.freepik.com/free-photo/picture-dissatisfied-grumpy-young-afro-american-woman-with-long-straight-hair-expressing-her-disagreement-keeping-arms-folded-looking-with-serious-skeptical-facial-expression_344912-1026.jpg?size=626&ext=jpg&ga=GA1.2.1951651028.1681229166&semt=robertav1_2_sidr" />
+                </div>
+              </div>
+              <Button onClick={handleLogOut} className='bg-amber-500 border-0' >Logout</Button>
+            </> : <Link to="/login">
+              <Button className=' bg-amber-500 border-0'>Login</Button>
+            </Link>
           }
         </div>
       </div>

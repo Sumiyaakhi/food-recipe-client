@@ -7,6 +7,7 @@ const Register = () => {
 
     const { user, createUser } = useContext(AuthContext);
 
+   
     const [error, setError] = useState('');
     const [success, setSuccess] = useState("")
     const emailRef = useRef()

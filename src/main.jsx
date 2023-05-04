@@ -14,6 +14,7 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Blog from './Components/Blog/Blog';
 import AuthProviders from './Components/Provider/AuthProvider';
 import AboutUs from './Components/AboutUs/AboutUs';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/chefCard/:id',
-        element:<ChefDetail></ChefDetail>,
+        element:<PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
         loader:({params}) => fetch(`http://localhost:5000/chefCard/${params.id}`)
       },
       {

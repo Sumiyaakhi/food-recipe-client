@@ -3,7 +3,6 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/Ai';
 import { BiStreetView } from 'react-icons/Bi';
 import Recipes from '../Recipes/Recipes';
-import {  ClapSpinner } from 'react-spinners-kit';
 
 
 const ChefDetail = () => {

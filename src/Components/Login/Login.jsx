@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FcGoogle } from 'react-icons/Fc';
 import { AiFillGithub } from 'react-icons/Ai';
@@ -8,6 +8,10 @@ const Login = () => {
 
     const { signIn, signInWithGoogle,signInWithGithub } = useContext(AuthContext);
 
+    const [error,setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/' ;
     const handleLogin = event => {
         event.preventDefault();
 
@@ -21,9 +25,10 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
+                navigate(from, {replace: true})
             })
             .catch(error => {
-                console.log(error)
+             setError(error.message)   
             })
     }
 
@@ -84,6 +89,7 @@ const Login = () => {
                     </p>
 
                 </div>
+                <p className='text-red-500'> {error}</p>
                 <div className='flex justify-center items-center border-amber-500 mt-5'>
                     <FcGoogle className='w-6 h-6'></FcGoogle>
                     <button onClick={handleGoogleSignIn}><Link className="ps-2 link-hover"> Login with Google</Link></button>
