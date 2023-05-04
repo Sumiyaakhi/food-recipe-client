@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MdFastfood } from 'react-icons/Md';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 
 const Header = () => {
@@ -40,8 +41,8 @@ const Header = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <Link className='no-underline text-orange-500 pe-3' to='/'>Home</Link>
-            <Link className='no-underline text-orange-500' to='blog'>Blog</Link>
+            <ActiveLink  to='/'>Home</ActiveLink>
+            <ActiveLink  to='blog'>Blog</ActiveLink>
 
           </ul>
         </div>
