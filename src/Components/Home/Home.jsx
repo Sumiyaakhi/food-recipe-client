@@ -30,6 +30,13 @@ const Home = () => {
                 <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
                 <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
             </div>
+           <div className='flex justify-center mb-5'>
+           <div className="btn-group ">
+                <button className="btn">«</button>
+                <button className="btn">Page 22</button>
+                <button className="btn">»</button>
+            </div>
+           </div>
         </div>
     );
 };

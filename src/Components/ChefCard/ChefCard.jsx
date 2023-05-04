@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 
 const ChefCard = ({chefCard}) => {
+
     const {id, picture, name, years_of_experience,num_recipes,likes,views} = chefCard;
 //    console.log(chefCard);
 
     return (
         <div >
-            
+             
             <div className="card w-96 bg-base-100 shadow-xl">
                 <img className='rounded' src={picture} />
                 <div className="card-body">
@@ -23,6 +24,7 @@ const ChefCard = ({chefCard}) => {
                     </div>
                 </div>
             </div>
+                
         </div>
     );
 };

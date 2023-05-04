@@ -3,14 +3,18 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/Ai';
 import { BiStreetView } from 'react-icons/Bi';
 import Recipes from '../Recipes/Recipes';
+import {  ClapSpinner } from 'react-spinners-kit';
+
 
 const ChefDetail = () => {
+    
 
     const cardDetail = useLoaderData();
     const { picture, name, years_of_experience, num_recipes, likes, views, description } = cardDetail;
     console.log(cardDetail);
     return (
         <div>
+
             <div className="card lg:card-side mx-24 bg-slate-100 my-24  shadow-xl">
                 <img className='pe-8' src={picture} alt="" />
                 <div className="card-body">
@@ -25,7 +29,7 @@ const ChefDetail = () => {
                     <p>Views: {views}</p>
                     <BiStreetView className='w-6 h-6 text-amber-500'></BiStreetView>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Listen</button>
+                        
                     </div>
                 </div>
             </div>
