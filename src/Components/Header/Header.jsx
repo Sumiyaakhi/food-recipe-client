@@ -52,9 +52,14 @@ const Header = () => {
                 </div>
               </div>
               <Button onClick={handleLogOut} className='bg-amber-500 border-0' >Logout</Button>
-            </> : <Link to="/login">
-              <Button className=' bg-amber-500 border-0'>Login</Button>
+            </> : <div>
+            <Link to="/login">
+              <Button className=' bg-amber-500 border-0 mr-3'>Login</Button>
             </Link>
+             <Link to="/register">
+              <Button className=' bg-amber-500 border-0'>Register</Button>
+            </Link>
+            </div>
           }
         </div>
       </div>
